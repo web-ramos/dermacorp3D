@@ -15,7 +15,132 @@ canvas {
   height: 100%;
   position: relative;
 }
+#model3D *:focus {
+  outline: none;
+}
 
 .controls3D {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  
+}
+
+.controls3D__button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  background: white;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  pointer-events: auto; 
+}
+
+.controls3D__button:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 7px;
+  height: 7px;
+  left: 17px;
+  top: 16px;
+  border-left: 1.6px solid #BBBBBB;  
+  border-top: 1.6px solid #BBBBBB;  
+  transform: rotate(-45deg);
+}
+
+.controls3D__button--left {
+  margin-left: -60px;
+}
+
+.controls3D__button--right {
+  margin-left: 60px;
+}
+
+.controls3D__button--right:after {
+  left: 15px;  
+  transform: rotate(135deg);
+}
+
+.controls3D__mouse {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin-top: -12px;
+  margin-left: -12px;
+  top: 50%;
+  left: 50%;
+  background: #FF666A;
+  box-shadow: 0px 15px 20px rgba(255, 102, 106, 0.3);
+  border-radius: 32px;
+  pointer-events: none;  
+}
+
+.model3D__decor {
+  position: absolute;
+}
+
+.model3D__decor--one {
+  left: 12%;
+  top: 20%;
+}
+
+.model3D__decor--two {
+  left: 0;
+  top: 80%;
+}
+
+.model3D__decor--three {
+  right: 0;
+  bottom: 10%;
+}
+
+.model3D__decor--four {
+  top: 30%;
+  left: 5%;
+}
+
+.model3D__decor--five {
+  left: 15%;
+  bottom: 10%;
+}
+
+.model3D__decor--six {
+  right: 0;
+  bottom: 5%;
+}
+
+#model3D__loader {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: absolute;
+  z-index: 10;
+}
+
+
+.model3D__loader--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
+}
+
+#model3D__loader svg {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.model3D__decor--ellipse {
+  position: absolute;
+  top: 50%;
+  margin-top: -84px;
+  width: 100%;  
 }

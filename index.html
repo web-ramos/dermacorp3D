@@ -4,14 +4,94 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="model3D" style="width: 500px;">
+    <div id="model3D" style="width: 488px; height: 700px;">
+        <div id="model3D__loader">
+            <div class="model3D__loader--wrapper">
+                <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 52 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                    <circle fill="#ff666a" stroke="none" cx="6" cy="50" r="6">
+                        <animate
+                        attributeName="opacity"
+                        dur="1s"
+                        values="0;1;0"
+                        repeatCount="indefinite"
+                        begin="0.1"/>    
+                    </circle>
+                    <circle fill="#ff666a" stroke="none" cx="26" cy="50" r="6">
+                        <animate
+                        attributeName="opacity"
+                        dur="1s"
+                        values="0;1;0"
+                        repeatCount="indefinite" 
+                        begin="0.2"/>       
+                    </circle>
+                    <circle fill="#ff666a" stroke="none" cx="46" cy="50" r="6">
+                        <animate
+                        attributeName="opacity"
+                        dur="1s"
+                        values="0;1;0"
+                        repeatCount="indefinite" 
+                        begin="0.3"/>     
+                    </circle>
+                </svg>
+            </div>
+        </div>        
         <div class="controls3D">
-            <div id="left3D" onmousedown="updateLeft()">Left</div>
-            <div id="right3D" onmousedown="updateRight()">Right</div>
+            <div class="model3D__decor model3D__decor--one">
+                <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.859375 30.6923L30.8594 0.692261L60.8594 30.6923C60.8594 47.2607 47.4278 60.6923 30.8594 60.6923C14.291 60.6923 0.859375 47.2607 0.859375 30.6923Z" fill="#95C9B2"/>
+                </svg>
+            </div>
+            <div class="model3D__decor model3D__decor--two">
+                <svg width="43" height="45" viewBox="0 0 43 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.8594 0.692261H0.859375V44.6923H21.8594C33.4514 44.6923 42.8594 34.8363 42.8594 22.6923C42.8594 10.5189 33.4514 0.692261 21.8594 0.692261Z" fill="#A270AC"/>
+                </svg>
+            </div>
+            <div class="model3D__decor model3D__decor--three">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.8594 0.692261C8.47045 0.692261 0.859375 8.30332 0.859375 17.6923C0.859375 27.0812 8.47045 34.6923 17.8594 34.6923C27.2483 34.6923 34.8594 27.0812 34.8594 17.6923C34.8594 8.30332 27.2483 0.692261 17.8594 0.692261Z" fill="#95C9B2"/>
+                </svg>
+            </div>         
+            <div class="model3D__decor model3D__decor--four">            
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2237 0.692261H7.473V17.5892H10.2237V0.692261Z" fill="#FF666A"/>
+                    <path d="M16.8591 10.5806V7.67559H0.859375V10.5806H16.8591Z" fill="#FF666A"/>
+                </svg>
+            </div>
+            <div class="model3D__decor model3D__decor--five">
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2237 0.692261H7.473V17.5892H10.2237V0.692261Z" fill="#FF666A"/>
+                    <path d="M16.8591 10.5806V7.67559H0.859375V10.5806H16.8591Z" fill="#FF666A"/>
+                </svg>                
+            </div>
+            <div class="model3D__decor model3D__decor--six">
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2237 0.692261H7.473V17.5892H10.2237V0.692261Z" fill="#FF666A"/>
+                    <path d="M16.8591 10.5806V7.67559H0.859375V10.5806H16.8591Z" fill="#FF666A"/>
+                </svg>                
+            </div>
+            <div class="model3D__decor--ellipse">
+                <svg height="109" viewBox="0 0 489 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M487.859 54.6923C487.859 58.0928 486.307 61.5014 483.168 64.8963C480.024 68.2963 475.339 71.6242 469.221 74.8255C456.987 81.2268 439.218 87.0218 417.177 91.8997C373.112 101.652 312.188 107.692 244.859 107.692C177.531 107.692 116.607 101.652 72.5414 91.8997C50.5006 87.0218 32.7319 81.2268 20.4977 74.8255C14.3796 71.6242 9.69463 68.2963 6.55083 64.8963C3.41188 61.5014 1.85938 58.0928 1.85938 54.6923C1.85938 51.2918 3.41188 47.8831 6.55083 44.4883C9.69463 41.0882 14.3796 37.7603 20.4977 34.5591C32.7319 28.1577 50.5006 22.3628 72.5414 17.4849C116.607 7.73269 177.531 1.69226 244.859 1.69226C312.188 1.69226 373.112 7.73269 417.177 17.4849C439.218 22.3628 456.987 28.1577 469.221 34.5591C475.339 37.7603 480.024 41.0882 483.168 44.4883C486.307 47.8831 487.859 51.2918 487.859 54.6923Z" stroke="url(#paint0_linear)" stroke-width="2"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="260.839" y1="102.692" x2="260.839" y2="10" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#DEDEDE"/>
+                    <stop offset="1" stop-color="#DEDEDE" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+            </div>                     
+            <div id="left3D" class="controls3D__button controls3D__button--left" onmousedown="updateLeft()"></div>
+            <div id="right3D" class="controls3D__button controls3D__button--right" onmousedown="updateRight()"></div>
+            <div id="mouse3D" class="controls3D__mouse">
+                <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.9849 0L0.726562 6.5V19.5L11.9849 26L23.2433 19.5V6.5L11.9849 0ZM20.9486 6.93938L11.9849 12.1147L3.02124 6.93938L11.9849 1.76425L20.9486 6.93938ZM2.25436 8.26108L11.221 13.4378V23.7948L2.25436 18.6179V8.26108ZM12.7488 23.7948V13.4378L21.7155 8.26108V18.6179L12.7488 23.7948Z" fill="white"/>
+                </svg>
+            </div>
         </div>
     </div>
     <script src="three.js"></script>
-    <!--script src="OrbitControls.js"></script-->
+    <script src="OrbitControls.js"></script>
     <script src="OBJLoader.js"></script>
     <script src="MTLLoader.js"></script>
     <script src="code.js"></script> 
